@@ -1,0 +1,160 @@
+@font-face {
+    font-family: "Werebeast";
+    src: url("/assets/fonts/werebeast.ttf") format("truetype"); 
+}
+
+/* Video Background */
+.plr_video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    filter: blur(10px);
+    transition: filter 0.5s ease-in-out;
+}
+
+/* Click Overlay */
+.click-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-family: monospace;
+    font-size: 2vw; /* Scales with viewport */
+    z-index: 10;
+    cursor: pointer;
+}
+
+/* Hide Elements Initially */
+.plr_banner, .plr_info {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Banner Styling */
+.plr_banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(250px, 30vw, 600px); /* Scales smoothly */
+    text-align: center;
+    z-index: 5;
+    backdrop-filter: blur(0px);
+    box-shadow: 0 0 0px black;
+    border-radius: 10px;
+}
+
+/* Banner Image */
+.plr_banner img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+    opacity: 0;
+}
+
+/* Profile Picture & Username Positioned Centered Vertically */
+.plr_info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column; /* This makes the text go under the pfp */
+    align-items: center; /* Centers items horizontally */
+    gap: clamp(5px, 1vw, 0px);
+    opacity: 1;
+}
+
+/* Profile Picture */
+.plr_pfp img {
+    width: clamp(50px, 8vw, 100px);
+    border-radius: 50%;
+    box-shadow: 0 0 30px #000000;
+    opacity: 1;
+}
+
+/* Username */
+.plr_username {
+    font-size: clamp(16px, 2vw, 32px);
+    font-family: "Werebeast";
+    color: #000000;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+    line-height: 1; /* Prevents text shifting */
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+/* Volume Controls */
+.volume-control {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: none;
+    align-items: center;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 5px 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Volume Label */
+.volume-control label {
+    color: white;
+    font-size: 14px;
+    font-family: monospace;
+}
+
+/* Slider Base */
+#volume-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 140px;
+    height: 6px;
+    background: linear-gradient(to right, black, white);
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Slider Thumb Styling */
+#volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Smooth Thumb Expansion */
+#volume-slider::-webkit-slider-thumb:active {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+}
