@@ -1,8 +1,3 @@
-@font-face {
-    font-family: "Werebeast";
-    src: url("/assets/fonts/werebeast.ttf") format("truetype"); 
-}
-
 /* Video Background */
 .plr_video {
     position: fixed;
