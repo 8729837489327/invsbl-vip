@@ -17,7 +17,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  object-fit: fill;
+  object-fit: cover;
   z-index: -5;
   pointer-events: none;
   opacity: 0.5;
