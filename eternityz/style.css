@@ -130,7 +130,7 @@ body {
   gap: 20px;
   justify-content: center;
   align-items: center;
-  margin-top: 44%;
+  margin-top: 45%;
   z-index: 2;
 }
 
@@ -139,7 +139,7 @@ body {
 }
 
 .socials img {
-  width: clamp(30px, 4vw, 55px);
+  width: clamp(30px, 4vw, 45px);
   height: auto;
   border-radius: 50%;
   transition: transform 0.2s ease-in-out;
