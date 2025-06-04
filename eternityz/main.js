@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Detect mobile device
   const isMobile = /iPhone|iPad|iPod|Android|webOS|BlackBerry|Windows Phone/i.test(navigator.userAgent);
   if (isMobile) {
-    volumeControl.style.display = "none";
+    volumeControl.style.opacity = "0";
   }
 
   overlay.addEventListener("click", () => {
