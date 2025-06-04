@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
     video.play();
     video.style.filter = "none";
 
+    video.style.opacity = "1";
+
     overlay.style.display = "none";
 
     // Fade in container and volume control by adding "visible" class
