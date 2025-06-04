@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     video.muted = false;
     video.play();
     music.play();
+    music.volume = 1;
     video.volume = 1;
     video.style.filter = "none";
     video.style.opacity = "1";
