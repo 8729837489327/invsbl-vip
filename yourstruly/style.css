@@ -46,10 +46,15 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background: black;
+  /* Background Color */
+  background: rgba(0, 0, 0, 0);
+  /* Border */
+  border: 2px solid rgba(255, 255, 255, 0);
+  /* Glow */
+  box-shadow: 0px 0px 30px rgba(255, 255, 255, 0);
   width: clamp(260px, 30vw, 520px);
-  aspect-ratio: 4 / 2.2;
-  border-radius: 10px;
+  aspect-ratio: 4 / 2.5;
+  border-radius: 15px;
   box-sizing: border-box;
   gap: 0.5rem;
   padding: 1rem;
@@ -74,10 +79,11 @@ body {
   height: 60%;
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
   overflow: hidden;
   z-index: 1;
+  opacity: 0.4;
 }
 
 .banner img {
@@ -90,7 +96,7 @@ body {
 
 .profile {
   position: absolute;
-  left: 15%;
+  left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -106,12 +112,14 @@ body {
 
 .username {
   position: absolute;
-  left: 30%;
-  bottom: 50%;
-  transform: translateY(50%);
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
   color: rgb(255, 184, 223);
-  font-size: clamp(16px, 2vw, 24px);
+  font-size: clamp(16px, 2vw, 32px);
   font-weight: bold;
+  white-space: nowrap;
+  letter-spacing: 2px; /* Optional */
   z-index: 2;
   text-shadow: 0px 4px 5px black, 0px -4px 5px black, 4px 0px 5px black, -4px 0px 5px black;
   user-select: none;
@@ -123,7 +131,7 @@ body {
   gap: 20px;
   justify-content: center;
   align-items: center;
-  margin-top: 36%;
+  margin-top: 44%;
   z-index: 2;
 }
 
@@ -135,7 +143,7 @@ body {
   width: clamp(30px, 4vw, 55px);
   height: auto;
   border-radius: 50%;
-  transition: transform 1s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   display: block;
 }
 
