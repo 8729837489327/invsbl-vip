@@ -31,5 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.getElementById("volume-slider").addEventListener("input", (event) => {
     video.volume = event.target.value;
+    music.volume = event.target.value;
   });
 });
