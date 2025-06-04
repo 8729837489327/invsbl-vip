@@ -4,21 +4,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const volumeControl = document.getElementById("volume-control");
   const overlay = document.getElementById("clickOverlay");
 
+  // Detect mobile device
+  const isMobile = /iPhone|iPad|iPod|Android|webOS|BlackBerry|Windows Phone/i.test(navigator.userAgent);
+  if (isMobile) {
+    volumeControl.style.display = "none";
+  }
+
   overlay.addEventListener("click", () => {
     video.muted = false;
     video.play();
     video.style.filter = "none";
-
+    video.style.opacity = "1";
     overlay.style.display = "none";
 
-    // Fade in container and volume control by adding "visible" class
     container.classList.add("visible");
-    volumeControl.classList.add("visible");
+
+    // Only show volume control if not on mobile
+    if (!isMobile) {
+      volumeControl.classList.add("visible");
+    }
   });
 
-  document
-    .getElementById("volume-slider")
-    .addEventListener("input", (event) => {
-      video.volume = event.target.value;
-    });
+  document.getElementById("volume-slider").addEventListener("input", (event) => {
+    video.volume = event.target.value;
+  });
 });
