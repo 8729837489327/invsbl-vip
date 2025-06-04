@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   overlay.addEventListener("click", () => {
     video.muted = false;
     video.play();
+    video.volume = 1;
     video.style.filter = "none";
     video.style.opacity = "1";
     overlay.style.display = "none";
