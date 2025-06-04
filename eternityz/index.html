@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Tab Name -->
+    <title>i goon to 10 year olds</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="click-overlay" id="clickOverlay">[ Click ]</div>
+
+    <!-- Background -->
+    <video id="background" loop muted class="background" disablePictureInPicture controlsList="nodownload nofullscreen noremoteplayback">
+        <source src="https://files.catbox.moe/nntgt2.mp4" type="video/mp4">
+    </video>
+
+    <div class="volume-control" id="volume-control">
+        <label for="volume-slider">Volume</label>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.001" value="0.5">
+    </div>
+
+    <div class="container" id="container">
+        <!-- Profile Image -->
+        <div class="profile">
+            <img src="https://files.catbox.moe/s7bomx.png" onerror="this.parentElement.style.display='none'">
+        </div>
+
+        <!-- Username -->
+        <div class="username">.eternityz</div>
+
+        <!-- Banner -->
+        <div class="banner">
+            <img src="" onerror="this.parentElement.style.display='none'">
+        </div>
+
+        <!-- Socials -->
+        <div class="socials">
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

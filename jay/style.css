@@ -20,7 +20,7 @@ body {
   object-fit: cover;
   z-index: -5;
   filter: blur(10px);
-  transition: filter 0.5s ease-in-out;
+  transition: filter 0.2s ease-in-out;
 }
 
 .click-overlay {
@@ -57,7 +57,7 @@ body {
   z-index: 0;
 
   opacity: 0;
-  transition: opacity 0.6s ease-in-out;
+  transition: opacity 1s ease-in-out;
   pointer-events: none; /* prevent interaction while hidden */
 }
 
@@ -91,14 +91,14 @@ body {
 .profile {
   position: absolute;
   left: 15%;
-  top: 45%;
+  top: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
   pointer-events: none;
 }
 
 .profile img {
-  width: clamp(50px, 6vw, 100px);
+  width: clamp(50px, 6vw, 120px);
   height: auto;
   border-radius: 50%;
   display: block;
@@ -108,6 +108,7 @@ body {
   position: absolute;
   left: 30%;
   bottom: 50%;
+  transform: translateY(50%);
   color: rgb(255, 184, 223);
   font-size: clamp(16px, 2vw, 24px);
   font-weight: bold;
@@ -134,7 +135,7 @@ body {
   width: clamp(30px, 4vw, 55px);
   height: auto;
   border-radius: 50%;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 1s ease-in-out;
   display: block;
 }
 
@@ -150,6 +151,7 @@ body {
   align-items: center;
   gap: 12px;
   background: rgba(0, 0, 0, 0.6);
+  color: white;
   padding: 8px 15px;
   border-radius: 8px;
   backdrop-filter: blur(10px);
@@ -157,7 +159,7 @@ body {
   user-select: none;
 
   opacity: 0;
-  transition: opacity 0.6s ease-in-out;
+  transition: opacity 1s ease-in-out;
   pointer-events: none;
 }
 
@@ -174,7 +176,7 @@ body {
   background: linear-gradient(to right, black, white);
   border-radius: 5px;
   outline: none;
-  transition: background 0.3s ease-in-out;
+  transition: background 1s ease-in-out;
   cursor: pointer;
 }
 
@@ -186,7 +188,7 @@ body {
   background: white;
   border-radius: 50%;
   cursor: default;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 1s ease-in-out;
 }
 
 #volume-slider:hover::-webkit-slider-thumb {
