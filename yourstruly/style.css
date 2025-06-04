@@ -19,6 +19,7 @@ body {
   height: 100vh;
   object-fit: cover;
   z-index: -5;
+  pointer-events: none;
   filter: blur(10px);
   transition: filter 0.2s ease-in-out;
 }
