@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const video = document.getElementById("background");
+  const music = document.getElementById("background-music");
   const container = document.getElementById("container");
   const volumeControl = document.getElementById("volume-control");
   const overlay = document.getElementById("clickOverlay");
@@ -13,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   overlay.addEventListener("click", () => {
     video.muted = false;
     video.play();
+    music.play();
     video.volume = 1;
     video.style.filter = "none";
     video.style.opacity = "1";
