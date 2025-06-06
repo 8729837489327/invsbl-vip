@@ -1,16 +1,79 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
+/* Reset & Core */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container {
-    text-align: center;
-    font-size: clamp(16px, 2vw, 100px);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bolder;
-    color: white;
+body {
+  background: radial-gradient(ellipse at top, #111 0%, #0a0a0a 100%);
+  color: #eaeaea;
+  font-family: 'Space Grotesk', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Sleek Card */
+.centered-card {
+  max-width: 540px;
+  width: 100%;
+  padding: 3rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(14px);
+  transition: all 0.3s ease;
+}
+
+/* Headline */
+h1 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Subtext */
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #a0a0a0;
+  margin-bottom: 2rem;
+}
+
+/* Outline Button */
+.outline-button {
+  padding: 0.75rem 1.75rem;
+  font-size: 1rem;
+  color: #eaeaea;
+  border: 1px solid #444;
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  letter-spacing: 0.5px;
+}
+
+.outline-button:hover {
+  border-color: #888;
+  background: rgba(255, 255, 255, 0.05);
+  transform: scale(1.03);
+}
+
+/* Responsive Touch */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .centered-card {
+    padding: 2rem;
+  }
 }
