@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+    background: black;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+    opacity: 1;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    opacity: 1;
+}
+
+.welcome-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    animation: fadeIn 5s ease forwards;
+    opacity: 0;
+    padding: 5rem;
+    border-radius: 30px;
+    border: 2px solid rgba(255, 255, 255, 0);
+    transition: opacity 5s ease, border-color 5s ease, backdrop-filter 5s ease;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    background: linear-gradient(90deg, #00fff0, #a100ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.title span {
+    color: #ffffff80;
+}
+
+.subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #ffffffcc;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+}
+
+.proceed-btn {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.85rem 3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.proceed-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    scale: 1.05;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    transition: scale 0.3s ease-in-out;
+}
+
+.button-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.donate-btn,
+.owners-btn {
+    display: none;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.85rem 3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 5s ease-in, transform 0.5s ease-out;
+}
+
+.donate-btn:hover,
+.owners-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
