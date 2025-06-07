@@ -7,8 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Enable Enter button after fade-in
     setTimeout(() => {
-        fadeIn(proceedBtn, 1);
-        enableButton(proceedBtn);
+        fadeIn(proceedBtn, 5);
+        setTimeout(() => {
+            enableButton(proceedBtn);
+        }, 6100);
     }, 1000);
 
     // Pause video after intro
@@ -51,7 +53,7 @@ function introPhase() {
 
         // Show donate button
         donateBtn.style.display = "inline-block";
-        donateBtn.offsetWidth;
+        donateBtn.offsetWidth; // trigger reflow
         fadeIn(donateBtn, 5);
         donateBtn.style.cursor = "default";
         donateBtn.disabled = true;
@@ -63,7 +65,7 @@ function introPhase() {
         ownersBtn.style.cursor = "default";
         ownersBtn.disabled = true;
 
-        // Enable both buttons
+        // Enable both buttons after fade
         setTimeout(() => {
             enableButton(donateBtn);
             enableButton(ownersBtn);

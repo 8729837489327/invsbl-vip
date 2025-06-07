@@ -82,6 +82,7 @@ body {
     letter-spacing: 0.05rem;
 }
 
+/* Proceed Button */
 .proceed-btn {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(12px);
@@ -93,16 +94,16 @@ body {
     border-radius: 12px;
     cursor: pointer;
     opacity: 0;
-    transition: all 1s ease;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.proceed-btn:hover {
+.proceed-btn:not(:disabled):hover {
     background: rgba(255, 255, 255, 0.2);
-    scale: 1.05;
+    transform: scale(1.05);
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
-    transition: scale 0.3s ease-in-out;
 }
 
+/* Button Stack Container */
 .button-stack {
     display: flex;
     flex-direction: column;
@@ -111,6 +112,7 @@ body {
     gap: 1rem;
 }
 
+/* Donate and Owners Buttons */
 .donate-btn,
 .owners-btn {
     display: none;
@@ -124,11 +126,11 @@ body {
     border-radius: 12px;
     cursor: pointer;
     opacity: 0;
-    transition: opacity 5s ease-in, transform 0.5s ease-out;
+    transition: opacity 5s ease-in, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.donate-btn:hover,
-.owners-btn:hover {
+.donate-btn:not(:disabled):hover,
+.owners-btn:not(:disabled):hover {
     background: rgba(255, 255, 255, 0.2);
     transform: scale(1.05);
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
