@@ -22,10 +22,17 @@ function introPhase() {
     hasIntroPlayed = true;
 
     const video = document.getElementById("background");
+    const title = document.getElementById("title");
     const proceedBtn = document.getElementById("proceed-btn");
     const donateBtn = document.getElementById("donate-btn");
     const ownersBtn = document.getElementById("owners-btn");
     const welcomeContent = document.querySelector(".welcome-content");
+
+    fadeOut(title, 1)
+    setTimeout(() => {
+        title.style.fontFamily = "werebeast";
+        fadeIn(title, 5);
+    }, 1000);
 
     // Play second part of video
     video.currentTime = 7.1;
