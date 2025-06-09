@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const proceedBtn = document.getElementById("proceed-btn");
 
     video.play();
+    video.muted = false;
     disableButton(proceedBtn);
 
     // Enable Enter button after fade-in
@@ -89,7 +90,7 @@ function ownersPage() {
 
 // --- Helper Functions ---
 function fadeIn(el, duration = 1) {
-    el.style.transition = `opacity ${duration}s ease`;
+    el.style.transition = `opacity ${duration}s ease-in`;
     el.style.opacity = "1";
 }
 
