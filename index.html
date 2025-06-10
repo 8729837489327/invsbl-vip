@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>invsbl.vip</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <video id="background" playsinline loop muted class="background" disablePictureInPicture controlsList="nodownload nofullscreen noremoteplayback">
+            <source src="intro.mp4" type="video/mp4">
+        </video>
+        
+
+        <div class="overlay"></div>
+
+        <div id="welcome-content" class="welcome-content">
+            <h1 id="title" class="title">invsbl<span>.vip</span></h1>
+            <p class="subtitle"></p>
+            <button id="proceed-btn" class="proceed-btn" onclick="introPhase()">Enter</button>
+            <div class="button-stack">
+                <button id="donate-btn" class="donate-btn" onclick="donateBtn()">Donate Here!</button>
+                <button id="owners-btn" class="owners-btn" onclick="ownersPage()">Owners Page!</button>
+            </div>
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+</html>

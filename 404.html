@@ -4,27 +4,17 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>invsbl.vip</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="404.css">
     </head>
-
     <body>
-        <video id="background" playsinline loop muted class="background" disablePictureInPicture controlsList="nodownload nofullscreen noremoteplayback">
-            <source src="https://cdn.xoa.me/uploads/ae7a5e00-2cac-4404-bb61-336931f1f115.mp4" type="video/mp4">
-        </video>
-        
+        <div id="background" class="background"></div>
 
-        <div class="overlay"></div>
-
-        <div id="welcome-content" class="welcome-content">
-            <h1 id="title" class="title">invsbl<span>.vip</span></h1>
-            <p class="subtitle"></p>
-            <button id="proceed-btn" class="proceed-btn" onclick="introPhase()">Enter</button>
-            <div class="button-stack">
-                <button id="donate-btn" class="donate-btn" onclick="donateBtn()">Donate Here!</button>
-                <button id="owners-btn" class="owners-btn" onclick="ownersPage()">Owners Page!</button>
-            </div>
+        <div id="container" class="container">
+            <h1 id="title" class="title">Page Not Found</h1>
+            <p id="subtitle" class="subtitle">The page you are looking for does not exist.</p>
+            <button id="home-btn" class="home-btn" onclick="homeFunction()">Home</button>
         </div>
-
-        <script src="main.js"></script>
     </body>
+
+    <script src="404.js"></script>
 </html>

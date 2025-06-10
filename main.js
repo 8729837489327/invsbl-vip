@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Enable Enter button after fade-in
     setTimeout(() => {
-        fadeIn(proceedBtn, 5);
+        fadeIn(proceedBtn, 3.650);
         setTimeout(() => {
             enableButton(proceedBtn);
-        }, 6100);
+        }, 2650);
     }, 1000);
 
     // Pause video after intro
-    setTimeout(() => video.pause(), 7100);
+    setTimeout(() => video.pause(), 3650);
 });
 
 let hasIntroPlayed = false;
@@ -34,35 +34,40 @@ function introPhase() {
     fadeOut(title, 1)
     setTimeout(() => {
         title.style.fontFamily = "werebeast";
-        fadeIn(title, 5);
+        fadeIn(title, 1);
     }, 1000);
 
     // Play second part of video
-    video.currentTime = 7.1;
+    video.currentTime = 3.650;
     video.muted = false;
     video.volume = 0.5;
     video.play();
-    video.style.transition = "opacity 5s ease";
-    video.style.opacity = "0.25";
+    video.style.transition = "opacity 5s ease-in-out";
+    video.style.opacity = "0.5";
 
     // Fade out & hide proceed button
     disableButton(proceedBtn);
     fadeOut(proceedBtn, 1);
 
     setTimeout(() => {
+        welcomeContent.style.opacity = "1";
+        welcomeContent.style.borderRadius = "30px";
+        welcomeContent.style.borderColor = "rgba(255, 255, 255, 0.1)";
+        welcomeContent.style.backdropFilter = "blur(10px)";
+
         proceedBtn.style.display = "none";
 
         // Show donate button
         donateBtn.style.display = "inline-block";
         donateBtn.offsetWidth; // trigger reflow
-        fadeIn(donateBtn, 5);
+        fadeIn(donateBtn, 2.5);
         donateBtn.style.cursor = "default";
         donateBtn.disabled = true;
 
         // Show owners button
         ownersBtn.style.display = "inline-block";
         ownersBtn.offsetWidth;
-        fadeIn(ownersBtn, 5);
+        fadeIn(ownersBtn, 2.5);
         ownersBtn.style.cursor = "default";
         ownersBtn.disabled = true;
 
@@ -70,14 +75,8 @@ function introPhase() {
         setTimeout(() => {
             enableButton(donateBtn);
             enableButton(ownersBtn);
-        }, 4000);
+        }, 2500);
     }, 1000);
-
-    // Fade in content container styling
-    welcomeContent.style.opacity = "1";
-    welcomeContent.style.borderRadius = "30px";
-    welcomeContent.style.borderColor = "rgba(255, 255, 255, 0.1)";
-    welcomeContent.style.backdropFilter = "blur(10px)";
 }
 
 function donateBtn() {
