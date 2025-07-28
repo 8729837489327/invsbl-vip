@@ -130,7 +130,7 @@ function playRandomTrack() {
   currentTrack = newTrack;
   audio.src = newTrack;
   audio.load();
-  audio.volume = 0;
+  audio.volume = 0.2;
   audio.play();
 }
 
