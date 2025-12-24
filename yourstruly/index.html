@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>invsbl.vip</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-layout="1">
+    <!-- Click overlay -->
+    <div class="click-overlay" id="clickOverlay">[ Click ]</div>
+
+    <!-- Background video -->
+    <video id="background" playsinline loop muted class="background" disablePictureInPicture controlsList="nodownload nofullscreen noremoteplayback">
+        <source src="whatusaying.webm" type="video/webm">
+    </video>
+
+    <!-- Background audio -->
+    <audio id="background-music" loop>
+        <source src="i was all over her.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Mute/unmute button -->
+    <button id="mute-btn" class="mute-btn">🔊</button>
+
+    <!-- Linktree container -->
+    <div class="container" id="container">
+        <!-- Profile Image -->
+        <div class="profile">
+            <img src="profile.gif" onerror="this.parentElement.style.display='none'">
+        </div>
+
+        <!-- Username -->
+        <div class="username">jay</div>
+
+        <!-- Banner -->
+        <div class="banner">
+            <img src="" onerror="this.parentElement.style.display='none'">
+        </div>
+
+        <!-- Socials -->
+        <div class="socials">
+            <a href="https://discord.gg/invite/zhidden" target="_blank">
+                <img src="/assets/imgs/discord.jpg">
+            </a>
+            <a href="https://cash.app/$Jayway2saucyy" target="_blank">
+                <img src="/assets/imgs/cashapp.png">
+            </a>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
