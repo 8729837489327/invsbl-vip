@@ -32,9 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // MUTE BUTTON
   const muteBtn = document.getElementById("mute-btn");
   muteBtn.addEventListener("click", () => {
-    const isMuted = video.muted;
+    const isMuted = music.muted;
 
-    video.muted = !isMuted;
+    music.muted = !isMuted;
     muteBtn.textContent = isMuted ? "🔊" : "🔇";
   });
 });
