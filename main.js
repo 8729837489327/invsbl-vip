@@ -2,20 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const video = document.getElementById("background");
     const proceedBtn = document.getElementById("proceed-btn");
 
-    video.play();
-    video.muted = false;
-    disableButton(proceedBtn);
-
-    // Enable Enter button after fade-in
-    setTimeout(() => {
-        fadeIn(proceedBtn, 3.650);
-        setTimeout(() => {
-            enableButton(proceedBtn);
-        }, 2650);
-    }, 1000);
-
-    // Pause video after intro
-    setTimeout(() => video.pause(), 3650);
+    fadeIn(proceedBtn, 1)
 });
 
 let hasIntroPlayed = false;
@@ -38,7 +25,7 @@ function introPhase() {
     }, 1000);
 
     // Play second part of video
-    video.currentTime = 3.650;
+    video.currentTime = 31.500;
     video.muted = false;
     video.volume = 0.5;
     video.play();
@@ -60,22 +47,16 @@ function introPhase() {
         // Show donate button
         donateBtn.style.display = "inline-block";
         donateBtn.offsetWidth; // trigger reflow
-        fadeIn(donateBtn, 2.5);
+        fadeIn(donateBtn, 1);
         donateBtn.style.cursor = "default";
-        donateBtn.disabled = true;
+        donateBtn.disabled = false;
 
         // Show owners button
         ownersBtn.style.display = "inline-block";
         ownersBtn.offsetWidth;
-        fadeIn(ownersBtn, 2.5);
+        fadeIn(ownersBtn, 1);
         ownersBtn.style.cursor = "default";
-        ownersBtn.disabled = true;
-
-        // Enable both buttons after fade
-        setTimeout(() => {
-            enableButton(donateBtn);
-            enableButton(ownersBtn);
-        }, 2500);
+        ownersBtn.disabled = false;
     }, 1000);
 }
 
@@ -84,7 +65,7 @@ function donateBtn() {
 }
 
 function ownersPage() {
-    window.open("https://invsbl.vip/yourstruly", "_blank");
+    window.location.href = "https://invsbl.vip/yourstruly";
 }
 
 // --- Helper Functions ---

@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   overlay.addEventListener("click", () => {
     video.muted = true;
-    video.volume = 0;
+    video.volume = 1;
     video.play().catch(() => {});
 
     music.muted = false;
