@@ -8,12 +8,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
   overlay.addEventListener("click", () => {
-    video.muted = false;
-    video.volume = 1;
+    video.muted = true;
+    video.volume = 0;
     video.play().catch(() => {});
 
     music.muted = false;
-    music.volume = 0;
+    music.volume = 0.25;
     music.play().catch(() => {});
 
     video.style.filter = "none";
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   muteBtn.addEventListener("click", () => {
-    video.muted = !video.muted;
-    muteBtn.textContent = video.muted ? "🔇" : "🔊";
+    music.muted = !music.muted;
+    muteBtn.textContent = music.muted ? "🔇" : "🔊";
   });
 });
