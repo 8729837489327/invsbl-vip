@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     video.play().catch(() => {});
 
     music.muted = false;
-    music.volume = 0.25;
+    music.volume = 1;
     music.play().catch(() => {});
 
     video.style.filter = "none";
