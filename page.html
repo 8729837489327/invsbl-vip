@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>invsbl.vip</title>
+  <link id="layout-css" rel="stylesheet" href="">
+</head>
+<body>
+
+  <!-- Click overlay -->
+  <div class="click-overlay" id="clickOverlay">[ Click ]</div>
+
+  <!-- Background video -->
+  <video id="background" playsinline loop muted class="background" disablePictureInPicture controlsList="nodownload nofullscreen noremoteplayback">
+    <source id="bg-video-src" src="" type="video/webm">
+  </video>
+
+  <!-- Background music -->
+  <audio id="background-music" loop>
+    <source id="bg-music-src" src="" type="audio/mpeg">
+  </audio>
+
+  <!-- Mute button -->
+  <button id="mute-btn" class="mute-btn">🔊</button>
+
+  <!-- Layout root -->
+  <div id="layout-root"></div>
+
+  <script src="/page-loader.js"></script>
+</body>
+</html>

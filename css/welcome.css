@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+@font-face {
+    font-family: "werebeast";
+    src: url("/assets/fonts/werebeast.ttf") format("truetype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+    background: black;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+    opacity: 0.25;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    opacity: 1;
+}
+
+.welcome-content {
+    position: absolute;
+    width: clamp(280px, 40vw, 500px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    animation: fadeIn 5s ease forwards;
+    opacity: 0;
+    padding: clamp(2rem, 5vw, 4rem);
+    border-radius: clamp(1rem, 3vw, 2rem);
+    border: 2px solid rgba(255, 255, 255, 0);
+    transition: opacity 2.5s ease, border-color 2.5s ease, backdrop-filter 2.5s ease;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 900;
+    letter-spacing: -1px;
+    background: linear-gradient(90deg, #00fff0, #a100ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: clamp(0.5rem, 2vh, 1.5rem);
+}
+
+.title span {
+    color: #ffffff80;
+}
+
+.subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    margin-bottom: clamp(1rem, 2vh, 2rem);
+    color: #ffffffcc;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+}
+
+/* Proceed Button */
+.proceed-btn {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: clamp(0.5rem, 1.5vh, 0.85rem) clamp(2rem, 5vw, 3rem);
+    font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+    font-weight: 600;
+    border-radius: clamp(0.5rem, 2vw, 1rem);
+    cursor: pointer;
+    opacity: 0;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proceed-btn:not(:disabled):hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Stack Container */
+.button-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: clamp(1rem, 2vh, 2rem);
+    gap: clamp(0.75rem, 1.5vh, 1.5rem);
+}
+
+/* Donate and Owners Buttons */
+.donate-btn,
+.owners-btn {
+    display: none;
+    width: 100%;
+    max-width: clamp(100px, 60%, 250px);
+    height: auto;
+    max-height: clamp(100px, 30%, 100px);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: clamp(0.5rem, 1vh, 0.85rem) 0;
+    font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 5s ease-in, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.donate-btn:not(:disabled):hover,
+.owners-btn:not(:disabled):hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
