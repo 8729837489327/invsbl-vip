@@ -1,9 +1,1 @@
-{
-  "version": 1,
-  "routes": [
-    {
-      "pattern": "/*",
-      "fallback": "/index.html"
-    }
-  ]
-}
+/* /index.html 200
