@@ -1,8 +1,9 @@
 {
+  "version": 1,
   "routes": [
     {
-      "pattern": "/.*",
-      "serve": "/index.html"
+      "pattern": "/*",
+      "fallback": "/index.html"
     }
   ]
 }
