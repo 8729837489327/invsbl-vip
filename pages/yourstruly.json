@@ -1,7 +1,9 @@
 {
-  "layout": 1,
+  "layout": 2,
   "username": "jay",
   "usernameColor": "rgb(255,184,223)",
+  "containerColor": "rgba(0, 0, 0, 1)",
+  "containerBlur": "0px",
   "pfp": "/assets/pfp/profile.gif",
   "banner": "",
   "video": "https://files.catbox.moe/obgr9d.webm",
