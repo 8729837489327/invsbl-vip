@@ -3,44 +3,4 @@ body {
   font-family: monospace;
   background: black;
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
-}
-
-.container {
-  position: relative;
-  background: rgba(0,0,0,0.6);
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.profile img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-}
-
-.banner img {
-  width: 100%;
-  max-height: 150px;
-  object-fit: cover;
-}
-
-.socials img {
-  width: 40px;
-  height: 40px;
-  margin: 5px;
 }

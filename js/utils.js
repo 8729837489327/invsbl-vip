@@ -65,7 +65,7 @@ function donateBtn() {
 }
 
 function ownersPage() {
-    window.location.href = "https://invsbl.vip/yourstruly";
+    window.location.href = "/yourstruly";
 }
 
 // --- Helper Functions ---

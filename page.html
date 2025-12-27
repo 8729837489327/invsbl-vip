@@ -4,27 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>invsbl.vip</title>
-  <link id="layout-css" rel="stylesheet" href="">
+  <link id="layout-css" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Click overlay -->
-  <div class="click-overlay" id="clickOverlay">[ Click ]</div>
+  <div id="clickOverlay" class="click-overlay">[ Click ]</div>
 
-  <!-- Background video -->
-  <video id="background" playsinline loop muted class="background" disablePictureInPicture controlsList="nodownload nofullscreen noremoteplayback">
-    <source id="bg-video-src" src="" type="video/webm">
+  <video id="background" playsinline loop class="background">
+    <source id="bg-video-src" type="video/webm">
   </video>
 
-  <!-- Background music -->
   <audio id="background-music" loop>
-    <source id="bg-music-src" src="" type="audio/mpeg">
+    <source id="bg-music-src" type="audio/mpeg">
   </audio>
 
-  <!-- Mute button -->
   <button id="mute-btn" class="mute-btn">🔊</button>
 
-  <!-- Layout root -->
   <div id="layout-root"></div>
 
   <script src="/page-loader.js"></script>
